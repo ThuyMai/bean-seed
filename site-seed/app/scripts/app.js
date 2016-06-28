@@ -121,7 +121,7 @@ angular
         $httpProvider.interceptors.push('httpRequestInterceptor');
     }
 ])
-.factory('httpRequestInterceptor', function ($rootScope, $cookies, $location) {
+.factory('httpRequestInterceptor', function ($rootScope, $cookies) {
     var ret = {
         request: function (config) {
             var user_info = $cookies.get('userInfo') || '{}';
